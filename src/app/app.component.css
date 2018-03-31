@@ -1,0 +1,54 @@
+#bg{
+    background-image: url("/assets/images/2.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#box{
+    height: 200px; 
+    width: 300px;
+    background:rgba(0, 0, 0, 0.44);
+}
+
+#current-time{
+    color: #dcdcffe6;
+    font-size: 12px;
+    font-style: oblique;
+    border-bottom: solid #f5deb333;
+    border-bottom-width: medium;
+
+border-width: 0.1px;
+    /* font-family: 'Orbitron', sans-serif; */
+}
+
+#clock{
+    color: #17D4FE;
+    font-size: 32px;
+    font-style: oblique;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn.btn-dark{
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-right: 8px;
+    margin-left: 2px;
+    width: 20px;
+
+}
+
+.control-buttons{
+    margin-left: 4px;
+}

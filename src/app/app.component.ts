@@ -8,6 +8,13 @@ import { Component,OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'app';
   result: any;
+
+  hours: string= '00';
+  minutes: string= '00';
+
+  first: any = 0;
+  second: any = 0;
+  counter: number = 0;
   
   ngOnInit() {
     this.currentTime();
@@ -35,5 +42,64 @@ export class AppComponent implements OnInit {
     return i;
   }
 
+  addFirstDigit(){
+    if(this.first<23){
+        if (this.first<9) {
+          this.first += 1;
+          this.hours= '0' + this.first;        
+        }else{
+          this.first += 1;
+          this.hours = this.first;
+        }
+    }else{
+        this.first = 0;
+        this.hours = '00';
+    }
+  }
+
+  removeFirstDigit(){
+    if (this.first>0) {
+      if (this.first<=10) {
+        this.first -= 1;
+        this.hours= '0' + this.first;        
+      }else{
+        this.first -= 1;
+        this.hours = this.first;
+      }
+    }else{
+      this.first = 23;
+      this.hours = '23';
+    }
+  }
+
+  addSecondDigit(){
+    if(this.second<59){
+      if (this.second<9) {
+        this.second += 1;
+        this.minutes = '0' + this.second;
+      }else{
+        this.second += 1;
+        this.minutes = this.second;
+      }
+    }else{
+      this.second = 0;
+      this.minutes = '00';
+    }
+  }
+
+  removeSecondDigit(){
+    if (this.second>0) {
+      if (this.second<=10) {
+        this.second -= 1;
+        this.minutes= '0' + this.second;        
+      }else{
+        this.second -= 1;
+        this.minutes = this.second;
+      }
+    }else{
+      this.second = 59;
+      this.minutes = '59';
+    }
+  }
  
 }
