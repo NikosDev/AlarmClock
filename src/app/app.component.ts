@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   result: any;
   res: any;
   alarmLoading: boolean = false;
+  x: any;
 
   hours: string= '00';
   minutes: string= '00';
@@ -37,7 +38,9 @@ export class AppComponent implements OnInit {
     setTimeout(()=>{   
       if ((`${h}:${m}:${s}`)==`${this.res}:02`) {
         this.alarmLoading = false;
-        alert('WAKE UP!!!!')       
+        this.playSound();
+        alert('WAKE UP!!!!');
+        this.pauseSound();       
       }
       this.currentTime();
     },1000);  
@@ -112,8 +115,15 @@ export class AppComponent implements OnInit {
     this.res = `${x}:${y}`;
     this.alarmLoading = true;
     alert(`Alarm set to ${this.res}`);
-    
-    
-    
+  }
+
+  playSound(){
+    this.x = document.getElementById("myAudio"); 
+    this.x.play();
+  }
+
+  pauseSound(){
+    this.x = document.getElementById("myAudio"); 
+    this.x.pause();
   }
 }
