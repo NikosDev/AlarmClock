@@ -1,7 +1,6 @@
 # AlarmClock
 
-
-</br>
+This project was created with Angular 5 and generated with Angular CLI version 1.7.3.
 
 ## Site
 
@@ -10,10 +9,6 @@
 ## Info
 
 "Alarm Clock" is a web app, allowing user to set an alarm clock. Just click 'set alarm' button and wait for the soundtrack !!!
-
-## Build With
-
-This project was created with Angular 5 and generated with Angular CLI version 1.7.3.
 
 ## Development server
 
