@@ -52,3 +52,21 @@ border-width: 0.1px;
 .control-buttons{
     margin-left: 4px;
 }
+
+#alarm-on{
+    float:right;
+    color: #04a804;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#alarm-off{
+    float:right;
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#set-alarm-button{
+    margin-top: 24px;
+    background-color: #17D4FE;
+    color: #fff9f9
+}

@@ -8,6 +8,8 @@ import { Component,OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'app';
   result: any;
+  res: any;
+  alarmLoading: boolean = false;
 
   hours: string= '00';
   minutes: string= '00';
@@ -33,8 +35,12 @@ export class AppComponent implements OnInit {
     s = this.checkTime(s);
     this.result = h + ":" + m + ":" + s;
     setTimeout(()=>{   
+      if ((`${h}:${m}:${s}`)==`${this.res}:02`) {
+        this.alarmLoading = false;
+        alert('WAKE UP!!!!')       
+      }
       this.currentTime();
-    },500);  
+    },1000);  
   }
 
   checkTime(i){
@@ -102,4 +108,12 @@ export class AppComponent implements OnInit {
     }
   }
  
+  alarm(x,y){
+    this.res = `${x}:${y}`;
+    this.alarmLoading = true;
+    alert(`Alarm set to ${this.res}`);
+    
+    
+    
+  }
 }
